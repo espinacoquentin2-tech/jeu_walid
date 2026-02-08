@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bienvenue au Kukurbitacé : Walid Édition</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section id="start-screen" class="screen active">
+      <div class="hero">
+        <div class="hero-text">
+          <h1>Bienvenue au Kukurbitacé : Walid Édition</h1>
+          <p>
+            Aide Walid à deviner le lieu de son EVG en résolvant des énigmes, en explorant l'appartement
+            et en récupérant 4 objets essentiels.
+          </p>
+          <div class="buttons">
+            <button id="start-game" class="primary">Start</button>
+            <button id="open-achievements">Succès</button>
+          </div>
+        </div>
+        <div class="hero-image" aria-label="Image fournie par l'utilisateur">
+          <div class="placeholder">Image du jeu à fournir</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="achievements-screen" class="screen">
+      <header class="screen-header">
+        <h2>Succès</h2>
+        <button id="back-to-start">Retour</button>
+      </header>
+      <div id="achievements-list" class="achievement-grid"></div>
+    </section>
+
+    <section id="game-screen" class="screen">
+      <header class="screen-header">
+        <div>
+          <h2>Le Kukurbitacé</h2>
+          <p id="location-hint"></p>
+        </div>
+        <div class="header-actions">
+          <span id="coins-display">0 €</span>
+          <button id="return-to-start" class="ghost">Écran d'accueil</button>
+        </div>
+      </header>
+      <div class="game-layout">
+        <aside class="rooms-panel">
+          <h3>Pièces</h3>
+          <div id="rooms-list" class="room-list"></div>
+        </aside>
+        <section class="scene-panel">
+          <h3 id="room-title"></h3>
+          <p id="room-description"></p>
+          <div id="room-actions" class="actions"></div>
+        </section>
+        <aside class="inventory-panel">
+          <h3>Inventaire</h3>
+          <ul id="inventory-list"></ul>
+          <h3>Personnages</h3>
+          <ul id="characters-list"></ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <div id="dialog" class="dialog hidden" role="dialog" aria-modal="true">
+    <div class="dialog-content">
+      <h3 id="dialog-title"></h3>
+      <p id="dialog-text"></p>
+      <div id="dialog-extra"></div>
+      <div id="dialog-actions" class="dialog-actions"></div>
+    </div>
+  </div>
+
+  <div id="game-over" class="dialog hidden" role="dialog" aria-modal="true">
+    <div class="dialog-content">
+      <h3>Game Over</h3>
+      <p id="game-over-text"></p>
+      <button id="restart-game" class="primary">Recommencer</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
